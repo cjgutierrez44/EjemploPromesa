@@ -27,7 +27,8 @@ idInput.onkeyup = function(){
     Cbody.classList.remove("d-none");
     id = idInput.value;
     if(id.trim() == ""){
-        id = 0
+        id = 0;
+        return null;
     }
     promesa(id).then(data=>{
         nombre.innerHTML = data.name;
